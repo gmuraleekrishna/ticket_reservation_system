@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @journey_detail.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @journey_detail.to %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @journey_detail.date %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @journey_detail.direction %>
+</p>
+
+<%= link_to 'Edit', edit_journey_detail_path(@journey_detail) %> |
+<%= link_to 'Back', journey_details_path %>

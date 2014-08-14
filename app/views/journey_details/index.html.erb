@@ -1,0 +1,33 @@
+<h1>Ticket Resetvation System</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Date</th>
+      <th>Direction</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journey_details.each do |journey_detail| %>
+      <tr>
+        <td><%= journey_detail.from %></td>
+        <td><%= journey_detail.to %></td>
+        <td><%= journey_detail.date %></td>
+        <td><%= journey_detail.direction %></td>
+        <td><%= link_to 'Show', journey_detail %></td>
+        <td><%= link_to 'Edit', edit_journey_detail_path(journey_detail) %></td>
+        <td><%= link_to 'Destroy', journey_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Journey detail', new_journey_detail_path %>

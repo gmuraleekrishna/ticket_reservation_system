@@ -1,0 +1,33 @@
+<%= form_for(@journey_detail) do |f| %>
+  <% if @journey_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journey_detail.errors.count, "error") %> prohibited this journey_detail from being saved:</h2>
+
+      <ul>
+      <% @journey_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :direction %><br>
+    <%= f.text_field :direction %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
